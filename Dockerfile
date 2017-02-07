@@ -5,7 +5,7 @@ MAINTAINER Baohua Yang <yeasy.github.com>
 
 EXPOSE 7050
 
-ENV ORDERER_CFG_PATH /etc/hyperledger/fabric
+ENV ORDERER_CFG_PATH /etc/hyperledger/fabric/orderer
 
 RUN mkdir -p $ORDERER_CFG_PATH
 
