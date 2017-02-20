@@ -7,6 +7,7 @@ MAINTAINER Baohua Yang <yeasy.github.com>
 
 ENV ORDERER_CFG_PATH /etc/hyperledger/fabric/
 ENV ORDERER_GENERAL_LOCALMSPDIR $ORDERER_CFG_PATH/msp/sampleconfig
+ENV ORDERER_GENERAL_GENESISPROFILE=SampleInsecureSolo
 
 RUN mkdir -p $ORDERER_CFG_PATH $ORDERER_GENERAL_LOCALMSPDIR
 
@@ -16,6 +17,6 @@ RUN cd $FABRIC_HOME/orderer \
         && go clean \
         && cp $FABRIC_HOME/orderer/orderer.yaml $ORDERER_CFG_PATH/ \
         && cp -r $FABRIC_HOME/msp/sampleconfig/* $ORDERER_GENERAL_LOCALMSPDIR \
-        && cp $FABRIC_HOME/common/configtx/tool/genesis.yaml $ORDERER_CFG_PATH
+        && cp $FABRIC_HOME/common/configtx/tool/configtx.yaml $ORDERER_CFG_PATH
 
 CMD ["orderer"]
