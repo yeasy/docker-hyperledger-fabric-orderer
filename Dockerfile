@@ -14,7 +14,13 @@ RUN mkdir -p $ORDERER_CFG_PATH $ORDERER_GENERAL_LOCALMSPDIR
 
 # install hyperledger fabric orderer
 RUN cd $FABRIC_HOME/orderer \
-        && CGO_CFLAGS=" " go install -ldflags "-X github.com/hyperledger/fabric/common/metadata.Version=${PROJECT_VERSION} -X github.com/hyperledger/fabric/common/metadata.BaseVersion=${BASE_VERSION} -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric -linkmode external -extldflags '-static -lpthread'" \
+        && CGO_CFLAGS=" " go install -ldflags \
+        "-X github.com/hyperledger/fabric/common/metadata.Version=${PROJECT_VERSION} \
+        -X github.com/hyperledger/fabric/common/metadata.BaseVersion=${BASE_VERSION} \
+        -X github.com/hyperledger/fabric/common/metadata.BaseDockerLabel=org.hyperledger.fabric \
+        -X github.com/hyperledger/fabric/common/metadata.DockerNamespace=hyperledger \
+        -X github.com/hyperledger/fabric/common/metadata.BaseDockerNamespace=hyperledger \
+        -linkmode external -extldflags '-static -lpthread'" \
         && go clean \
         && cp $FABRIC_HOME/orderer/orderer.yaml $ORDERER_CFG_PATH/ \
         && cp -r $FABRIC_HOME/msp/sampleconfig/* $ORDERER_GENERAL_LOCALMSPDIR \
