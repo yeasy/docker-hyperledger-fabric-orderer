@@ -15,7 +15,7 @@ RUN mkdir -p $FABRIC_CFG_PATH $ORDERER_GENERAL_LOCALMSPDIR
 
 # install hyperledger fabric orderer
 RUN cd $FABRIC_HOME/orderer \
-        && CGO_CFLAGS=" " go install -ldflags "$LDFLAGS -linkmode external -extldflags '-static -lpthread'" \
+        && CGO_CFLAGS=" " go install -ldflags "$LD_FLAGS -linkmode external -extldflags '-static -lpthread'" \
         && go clean
 
 CMD ["orderer"]
