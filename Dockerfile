@@ -5,7 +5,7 @@ LABEL maintainer "Baohua Yang <yeasy.github.com>"
 
 EXPOSE 7050
 
-ENV FABRIC_CFG_PATH /etc/hyperledger/fabric/
+#ENV FABRIC_CFG_PATH /etc/hyperledger/fabric
 ENV ORDERER_GENERAL_GENESISPROFILE=SampleInsecureSolo
 ENV ORDERER_GENERAL_LOCALMSPDIR $FABRIC_CFG_PATH/msp
 ENV ORDERER_GENERAL_LISTENADDRESS 0.0.0.0
