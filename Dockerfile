@@ -14,7 +14,7 @@ ENV CONFIGTX_ORDERER_ORDERERTYPE=solo
 RUN mkdir -p $FABRIC_CFG_PATH $ORDERER_GENERAL_LOCALMSPDIR
 
 # install hyperledger fabric orderer
-RUN cd $FABRIC_HOME/orderer \
+RUN cd $FABRIC_ROOT/orderer \
         && CGO_CFLAGS=" " go install -ldflags "$LD_FLAGS -linkmode external -extldflags '-static -lpthread'" \
         && go clean
 
