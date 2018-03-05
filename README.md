@@ -5,6 +5,7 @@ Docker images for [Hyperledger fabric orderer](https://github.com/hyperledger/fa
 # Supported tags and respective Dockerfile links
 
 * [`latest` (latest/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master/Dockerfile): tracking latest code at master branch.
+* [`v1.1.0-rc1` (v1.1.0-rc1/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.1.0-rc1/Dockerfile): v1.1.0-rc1 release.
 * [`v1.0.6` (v1.0.6/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.0.6/Dockerfile): v1.0.6 release.
 * [`v1.1.0-alpha` (v1.1.0-alpha/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.1.0-alpha/Dockerfile): v1.1.0-alpha release.
 * [`v1.1.0-preview` (v1.1.0-preview/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.1.0-preview/Dockerfile): v1.1.0-preview release.
