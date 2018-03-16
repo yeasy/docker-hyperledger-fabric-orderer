@@ -5,6 +5,7 @@ Docker images for [Hyperledger fabric orderer](https://github.com/hyperledger/fa
 # Supported tags and respective Dockerfile links
 
 * [`latest` (latest/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master/Dockerfile): tracking latest code at master branch.
+* [`v1.1.0` (v1.1.0/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.1.0/Dockerfile): v1.1.0 release.
 * [`v1.1.0-rc1` (v1.1.0-rc1/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.1.0-rc1/Dockerfile): v1.1.0-rc1 release.
 * [`v1.0.6` (v1.0.6/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.0.6/Dockerfile): v1.0.6 release.
 * [`v1.1.0-alpha` (v1.1.0-alpha/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-orderer/blob/master v1.1.0-alpha/Dockerfile): v1.1.0-alpha release.
@@ -22,7 +23,7 @@ Docker images for [Hyperledger fabric orderer](https://github.com/hyperledger/fa
 
 For more information about this image and its history, please see the relevant manifest file in the [`yeasy/docker-hyperledger-fabric-orderer` GitHub repo](https://github.com/yeasy/docker-hyperledger-fabric-orderer).
 
-If you want to quickly deploy a local fabric cluster without any configuration and vagrant, please refer to [Start hyperledger clsuter using compose](https://github.com/yeasy/docker-compose-files#hyperledger).
+If you want to quickly deploy a local fabric cluster without any configuration and vagrant, please refer to [Start hyperledger clsuter using compose](https://github.com/yeasy/docker-compose-files#hyperledger_fabric).
 
 # What is docker-hyperledger-fabric-orderer?
 Docker image with hyperledger fabric orderer deployed. 
