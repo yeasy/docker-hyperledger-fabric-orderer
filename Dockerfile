@@ -19,4 +19,4 @@ RUN cd $FABRIC_ROOT/orderer \
         && CGO_CFLAGS=" " go install -tags "experimental" -ldflags "$LD_FLAGS -linkmode external -extldflags '-static -lpthread'" \
         && go clean
 
-CMD ["orderer start"]
+CMD ["orderer", "start"]
