@@ -15,7 +15,7 @@ ENV ORDERER_GENERAL_LISTENADDRESS 0.0.0.0
 RUN mkdir -p $FABRIC_CFG_PATH $ORDERER_GENERAL_LOCALMSPDIR
 
 # install hyperledger fabric orderer
-RUN cd $FABRIC_ROOT/orderer \
+RUN cd $FABRIC_ROOT/orderer/common/server \
         && CGO_CFLAGS=" " go install -tags "" -ldflags "$LD_FLAGS" \
         && go clean
 
