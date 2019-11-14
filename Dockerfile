@@ -1,4 +1,7 @@
-# Dockerfile for Hyperledger fabric-orderer image.  FROM yeasy/hyperledger-fabric-base:latest
+# Dockerfile for Hyperledger fabric-orderer image. 
+
+FROM yeasy/hyperledger-fabric-base:latest
+
 LABEL maintainer "Baohua Yang <yeasy.github.com>"
 
 EXPOSE 7050
