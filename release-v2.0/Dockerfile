@@ -2,14 +2,13 @@
 #
 # Dockerfile for Hyperledger fabric-orderer image.
 
-FROM yeasy/hyperledger-fabric-base:latest
+FROM yeasy/hyperledger-fabric-base:release-v2.0
 LABEL maintainer "Baohua Yang <yeasy.github.com>"
 
 EXPOSE 7050
 
 ENV ORDERER_GENERAL_LOCALMSPDIR $FABRIC_CFG_PATH/msp
 ENV ORDERER_GENERAL_LISTENADDRESS 0.0.0.0
-# ENV CONFIGTX_ORDERER_ORDERERTYPE=etcdraft
 
 RUN mkdir -p $FABRIC_CFG_PATH $ORDERER_GENERAL_LOCALMSPDIR
 
